@@ -6,6 +6,7 @@
 **Role:** BIM Engineer (Project Associate L1)  
 **Tools Used:** Autodesk Revit, FARO (Point Cloud Data)  
 
+
 ### 1. The Context & Challenge
 The ONGC Uran facility is a massive 250-acre oil and gas plant. Following an on-site accident, there was a critical need to assess the structural stability of the affected areas to facilitate safe reconstruction. The primary challenge was accurately capturing the complex, real-world conditions of the damaged industrial steel structures, pipe racks, and storage tanks so that structural engineers could reliably analyze the plant's health.
 
