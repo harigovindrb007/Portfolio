@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hari Govind R.B — BIM Engineering Portfolio</title>
+    <style>
+        /* ===== RESET & BASE ===== */
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+        :root {
+            --bg: #f8f9fa;
+            --card-bg: #ffffff;
+            --text: #1a1a2e;
+            --text-muted: #555;
+            --accent: #0077b6;
+            --accent-dark: #005f8a;
+            --accent-light: #e0f2fe;
+            --border: #e2e8f0;
+            --tag-bg: #eef4ff;
+            --tag-text: #3366cc;
+            --section-gap: 60px;
+        }
+
+        body {
+            font-family: 'Segoe UI', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.7;
+            font-size: 15px;
+        }
+
+        /* ===== HEADER / HERO ===== */
+        .hero {
+            background: linear-gradient(135deg, #0a1628 0%, #0d2137 40%, #0a3d62 100%);
+            color: #fff;
+            padding: 60px 40px;
+            text-align: center;
+        }
+        .hero h1 {
+            font-size: 42px;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+            margin-bottom: 8px;
+        }
+        .hero .subtitle {
+            font-size: 18px;
+            color: #90caf9;
+            font-weight: 400;
+            margin-bottom: 20px;
+        }
+        .hero .contact-row {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+            font-size: 14px;
+            color: #b0bec5;
+        }
+        .hero .contact-row span { white-space: nowrap; }
+
+        /* ===== SUMMARY BAR ===== */
+        .summary-bar {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+            background: var(--card-bg);
+            border-bottom: 1px solid var(--border);
+            padding: 24px 40px;
+        }
+        .summary-item {
+            text-align: center;
+        }
+        .summary-item .number {
+            font-size: 28px;
+            font-weight: 700;
+            color: var(--accent);
+        }
+        .summary-item .label {
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--text-muted);
+        }
+
+        /* ===== CONTAINER ===== */
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* ===== SECTION HEADING ===== */
+        .section-title {
+            text-align: center;
+            margin: var(--section-gap) 0 40px;
+        }
+        .section-title h2 {
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            color: var(--accent);
+            margin-bottom: 8px;
+        }
+        .section-title p {
+            font-size: 28px;
+            font-weight: 700;
+            color: var(--text);
+        }
+
+        /* ===== PROJECT CARD ===== */
+        .project {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            margin-bottom: 50px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.04);
+        }
+        .project-header {
+            padding: 32px 36px 20px;
+            border-bottom: 1px solid var(--border);
+        }
+        .project-header .project-number {
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--accent);
+            font-weight: 600;
+            margin-bottom: 6px;
+        }
+        .project-header h3 {
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 12px;
+        }
+        .project-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 8px;
+        }
+        .meta-tag {
+            background: var(--tag-bg);
+            color: var(--tag-text);
+            font-size: 12px;
+            font-weight: 600;
+            padding: 4px 12px;
+            border-radius: 20px;
+        }
+        .meta-tag.role {
+            background: #fff3e0;
+            color: #e65100;
+        }
+
+        .project-body {
+            padding: 30px 36px;
+        }
+        .project-body h4 {
+            font-size: 16px;
+            font-weight: 700;
+            color: var(--accent-dark);
+            margin: 24px 0 10px;
+            padding-bottom: 4px;
+            border-bottom: 2px solid var(--accent-light);
+            display: inline-block;
+        }
+        .project-body h4:first-child {
+            margin-top: 0;
+        }
+        .project-body p {
+            color: var(--text-muted);
+            margin-bottom: 10px;
+        }
+        .project-body ul {
+            list-style: none;
+            padding: 0;
+        }
+        .project-body ul li {
+            position: relative;
+            padding-left: 22px;
+            margin-bottom: 8px;
+            color: var(--text-muted);
+        }
+        .project-body ul li::before {
+            content: '▸';
+            position: absolute;
+            left: 0;
+            color: var(--accent);
+            font-weight: 700;
+        }
+        .project-body ul li strong {
+            color: var(--text);
+        }
+
+        /* ===== IMAGE GALLERY ===== */
+        .gallery {
+            padding: 0 36px 30px;
+        }
+        .gallery-label {
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--accent);
+            font-weight: 600;
+            margin-bottom: 16px;
+        }
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 12px;
+        }
+        .gallery-grid img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            border-radius: 8px;
+            border: 1px solid var(--border);
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .gallery-grid img:hover {
+            transform: scale(1.02);
+            box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+        }
+        .gallery-grid img.hero-img {
+            grid-column: 1 / -1;
+            height: 360px;
+            object-fit: contain;
+            background: #f0f4f8;
+        }
+        .gallery-grid img.tall {
+            height: 300px;
+            object-fit: contain;
+            background: #f0f4f8;
+        }
+
+        /* ===== SKILLS BAR ===== */
+        .skills-section {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 36px;
+            margin-bottom: 50px;
+        }
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+            gap: 24px;
+            margin-top: 20px;
+        }
+        .skill-group h5 {
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--accent);
+            margin-bottom: 8px;
+        }
+        .skill-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+        }
+        .skill-tags span {
+            background: var(--tag-bg);
+            color: var(--tag-text);
+            font-size: 12px;
+            font-weight: 500;
+            padding: 4px 10px;
+            border-radius: 6px;
+        }
+
+        /* ===== FOOTER ===== */
+        footer {
+            text-align: center;
+            padding: 40px;
+            color: var(--text-muted);
+            font-size: 13px;
+            border-top: 1px solid var(--border);
+            margin-top: 40px;
+        }
+
+        /* ===== LIGHTBOX ===== */
+        .lightbox {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(0,0,0,0.92);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+            cursor: zoom-out;
+        }
+        .lightbox.active { display: flex; }
+        .lightbox img {
+            max-width: 92vw;
+            max-height: 92vh;
+            object-fit: contain;
+            border-radius: 4px;
+        }
+
+        /* ===== PRINT ===== */
+        @media print {
+            .hero { padding: 30px 20px; }
+            .project { break-inside: avoid; page-break-inside: avoid; }
+            .gallery-grid img { height: 180px; }
+            .lightbox { display: none !important; }
+            body { font-size: 12px; }
+        }
+
+        @media (max-width: 700px) {
+            .hero h1 { font-size: 28px; }
+            .gallery-grid { grid-template-columns: 1fr; }
+            .summary-bar { gap: 20px; }
+            .project-header, .project-body, .gallery { padding-left: 20px; padding-right: 20px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ===== HEADER ===== -->
+    <header class="hero">
+        <h1>Hari Govind R.B</h1>
+        <div class="subtitle">BIM Engineer &nbsp;|&nbsp; Architectural, Structural, Facade & Steel BIM</div>
+        <div class="contact-row">
+            <span>📞 +91 81590 02295</span>
+            <span>✉ harigovindhrb@gmail.com</span>
+            <span>🔗 linkedin.com/in/harigovindrb</span>
+        </div>
+    </header>
+
+    <!-- ===== SUMMARY BAR ===== -->
+    <div class="summary-bar">
+        <div class="summary-item">
+            <div class="number">4+</div>
+            <div class="label">Years Experience</div>
+        </div>
+        <div class="summary-item">
+            <div class="number">LOD 400</div>
+            <div class="label">Model Delivery</div>
+        </div>
+        <div class="summary-item">
+            <div class="number">95%+</div>
+            <div class="label">Clash Resolution</div>
+        </div>
+        <div class="summary-item">
+            <div class="number">3</div>
+            <div class="label">Countries</div>
+        </div>
+        <div class="summary-item">
+            <div class="number">ISO 19650</div>
+            <div class="label">CDE Workflow</div>
+        </div>
+    </div>
+
+    <div class="container">
+
+        <!-- ===== SECTION: SKILLS ===== -->
+        <div class="section-title">
+            <h2>Core Competencies</h2>
+            <p>Tools, Standards & Workflows</p>
+        </div>
+
+        <div class="skills-section">
+            <div class="skills-grid">
+                <div class="skill-group">
+                    <h5>BIM Software</h5>
+                    <div class="skill-tags">
+                        <span>Autodesk Revit</span>
+                        <span>Navisworks Manage</span>
+                        <span>ACC</span>
+                        <span>AutoCAD</span>
+                        <span>SketchUp</span>
+                        <span>3ds Max</span>
+                    </div>
+                </div>
+                <div class="skill-group">
+                    <h5>Automation</h5>
+                    <div class="skill-tags">
+                        <span>PyRevit</span>
+                        <span>DiRoots</span>
+                        <span>Dynamo</span>
+                        <span>Grasshopper</span>
+                    </div>
+                </div>
+                <div class="skill-group">
+                    <h5>Standards & Workflows</h5>
+                    <div class="skill-tags">
+                        <span>ISO 19650</span>
+                        <span>LOD 300–450</span>
+                        <span>IFC openBIM</span>
+                        <span>Scan-to-BIM</span>
+                        <span>CAD-to-BIM</span>
+                    </div>
+                </div>
+                <div class="skill-group">
+                    <h5>Coordination</h5>
+                    <div class="skill-tags">
+                        <span>Clash Detection</span>
+                        <span>Federated Model</span>
+                        <span>QA/QC</span>
+                        <span>Model Audit</span>
+                        <span>Worksharing</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ===== SECTION: PROJECTS ===== -->
+        <div class="section-title">
+            <h2>Key Projects</h2>
+            <p>Selected Case Studies</p>
+        </div>
+
+        <!-- ===== PROJECT 1: ONGC ===== -->
+        <article class="project">
+            <div class="project-header">
+                <div class="project-number">Project 01</div>
+                <h3>ONGC Oil & Gas Facility — Structural Health Assessment (250 Acres)</h3>
+                <div class="project-meta">
+                    <span class="meta-tag">📍 Uran, Maharashtra, India</span>
+                    <span class="meta-tag">🏭 Industrial / Oil & Gas</span>
+                    <span class="meta-tag role">👤 BIM Engineer</span>
+                    <span class="meta-tag">Revit</span>
+                    <span class="meta-tag">FARO Point Cloud</span>
+                    <span class="meta-tag">Scan-to-BIM</span>
+                </div>
+            </div>
+            <div class="project-body">
+                <h4>The Context & Challenge</h4>
+                <p>
+                    The ONGC Uran facility is a massive 250-acre oil and gas processing plant. Following an on-site accident, 
+                    there was a critical need to assess the structural stability of the affected areas and facilitate safe reconstruction. 
+                    The primary challenge was accurately capturing the complex, real-world conditions of damaged industrial steel structures, 
+                    pipe racks, storage tanks, and support trestles so that structural engineers could reliably analyze the plant's health.
+                </p>
+
+                <h4>My Process — Scan-to-BIM</h4>
+                <ul>
+                    <li><strong>Point Cloud-Based Steel Modeling:</strong> Using as-built FARO scan data, I reverse-engineered and modeled complex industrial steel structures in Revit — including storage tanks, pipe supports, trestles, multi-level sheds, and equipment foundations.</li>
+                    <li><strong>Dimensional Fidelity:</strong> Maintained precise dimensional accuracy against the point cloud data, ensuring the structural engineers received a true "digital twin" for their condition assessment and reconstruction planning.</li>
+                    <li><strong>Documentation Production:</strong> Produced accurate structural layout sheets with plans, sections, elevations, and cross-sections directly from the coordinated BIM model.</li>
+                </ul>
+
+                <h4>The Deliverable & Impact</h4>
+                <ul>
+                    <li><strong>Accurate As-Built Models</strong> of the facility's tanks, sheds, trestles, and structural support frameworks.</li>
+                    <li><strong>Comprehensive Drawing Packages</strong> including structural layouts, equipment plans, and detailed engineering reports.</li>
+                    <li><strong>Outcome:</strong> Successfully provided the engineering teams with the exact geometric baseline required for their structural stability reports and the subsequent plant reconstruction.</li>
+                </ul>
+            </div>
+            <div class="gallery">
+                <div class="gallery-label">Project Visuals</div>
+                <div class="gallery-grid">
+                    <img class="hero-img" src=".user_uploaded/media_1789394170911.jpg" alt="ONGC Full Site — Bird's Eye 3D View" title="Full Site — Bird's Eye 3D View" onclick="openLightbox(this)">
+                    <img src=".user_uploaded/media_1789394022257.jpg" alt="ONGC Tank Farm — 3D Isometric" title="Tank Farm — 3D Isometric" onclick="openLightbox(this)">
+                    <img src=".user_uploaded/media_1789394022363.jpg" alt="ONGC Steel Trestles — Close-up" title="Steel Trestles & Towers — Close-up" onclick="openLightbox(this)">
+                    <img src=".user_uploaded/media_1789394022370.jpg" alt="ONGC Shed Structure — 3D Model" title="Shed Structure — 3D Model" onclick="openLightbox(this)">
+                    <img src=".user_uploaded/media_1789394158521.jpg" alt="ONGC Full Facility — 3D View" title="Full Facility — 3D View" onclick="openLightbox(this)">
+                    <img src=".user_uploaded/media_1789394140311.jpg" alt="ONGC Upper Deck Truss Layout" title="Upper Deck Truss Layout Sheet" onclick="openLightbox(this)">
+                    <img class="tall" src=".user_uploaded/media_1789394022378.jpg" alt="ONGC MPRS Structural Layout Sheet" title="MPRS Structural Layout Sheet" onclick="openLightbox(this)">
+                    <img class="tall" src=".user_uploaded/media_1789394022381.jpg" alt="ONGC T-601B Structural Support Sheet" title="T-601B Structural Support Sheet" onclick="openLightbox(this)">
+                    <img class="tall" src=".user_uploaded/media_1789394170924.jpg" alt="ONGC MCTR1 Elevations & Sections" title="MCTR1 Elevations & Sections" onclick="openLightbox(this)">
+                    <img class="tall" src=".user_uploaded/media_1789394170920.jpg" alt="ONGC Equipment Layout Plan" title="Equipment Layout Plan" onclick="openLightbox(this)">
+                </div>
+            </div>
+        </article>
+
+        <!-- ===== PROJECT 2: EXIT 15 ===== -->
+        <article class="project">
+            <div class="project-header">
+                <div class="project-number">Project 02</div>
+                <h3>EXIT 15 — Theming Support Steel (Water Park)</h3>
+                <div class="project-meta">
+                    <span class="meta-tag">📍 Al Nahda Entertainment Complex, Riyadh, Saudi Arabia</span>
+                    <span class="meta-tag">🎢 Entertainment / Leisure</span>
+                    <span class="meta-tag role">👤 BIM Team Lead</span>
+                    <span class="meta-tag">Revit Steel</span>
+                    <span class="meta-tag">Tekla → IFC</span>
+                    <span class="meta-tag">Dynamo</span>
+                    <span class="meta-tag">Navisworks</span>
+                </div>
+            </div>
+            <div class="project-body">
+                <h4>The Context & Challenge</h4>
+                <p>
+                    For the Water Park sector of the massive EXIT 15 entertainment complex, I led the BIM delivery for highly complex 
+                    structural theming steel. The challenge was interpreting engineering calculations and converting external structural 
+                    models from Tekla into fully detailed, fabrication-ready Revit models — complete with all connections, base plates, 
+                    and bolting details — all while managing and mentoring a modeling team.
+                </p>
+
+                <h4>My Process & Leadership</h4>
+                <ul>
+                    <li><strong>Interoperability & Modeling:</strong> Received engineering calculations and structural models via Tekla. Led the workflow to convert IFC models into native Revit elements, meticulously modeling all complex steel connections using Revit Steel — including base plates, gusset plates, stiffeners, anchor bolts, and fillet welds.</li>
+                    <li><strong>Team Leadership:</strong> Mentored the modeling team on advanced Revit Steel features, troubleshot their technical issues, and resolved doubts to keep production moving at pace.</li>
+                    <li><strong>BIM Automation:</strong> Introduced specialized plugins and wrote custom Dynamo scripts to accelerate repetitive steel detailing tasks and reduce manual errors.</li>
+                    <li><strong>Fabrication-Level Documentation:</strong> Produced LOD 350+ shop drawings with comprehensive connection details, enlarged plans with annotations, and coordinate-based layout sheets for on-site steel erection.</li>
+                </ul>
+
+                <h4>The Deliverable & Impact</h4>
+                <ul>
+                    <li><strong>Coordinated Fabrication Models</strong> — Highly accurate steel support models integrating seamlessly with complex architectural theming and MEP systems.</li>
+                    <li><strong>Detailed Shop Drawings</strong> — Connection plate details (plan, section, 3D), column elevations, base plate schedules, and anchor bolt coordinates.</li>
+                    <li><strong>Increased Efficiency</strong> — Dynamo automation and direct mentorship empowered the team to deliver significantly faster while maintaining strict quality standards.</li>
+                </ul>
+            </div>
+            <div class="gallery">
+                <div class="gallery-label">Project Visuals</div>
+                <div class="gallery-grid">
+                    <img class="hero-img" src=".user_uploaded/media_1789397353897.png" alt="EXIT 15 Full Theming Model — Water Park" title="Full Theming Model — Water Park (Play-Doh Imagination Center)" onclick="openLightbox(this)">
+                    <img src=".user_uploaded/media_1789395391202.png" alt="EXIT 15 Federated Model — All Disciplines" title="Federated Model — All Disciplines Color-Coded" onclick="openLightbox(this)">
+                    <img src=".user_uploaded/media_1789395386971.png" alt="EXIT 15 Curved Steel Framework" title="Curved Steel Framework — Close-up" onclick="openLightbox(this)">
+                    <img src=".user_uploaded/media_1789397353877.png" alt="EXIT 15 Steel Connections" title="Steel Connections with Blue Highlights" onclick="openLightbox(this)">
+                    <img src=".user_uploaded/media_1789396225561.png" alt="EXIT 15 Steel Support Detail" title="Steel Support Detail — Realistic Render" onclick="openLightbox(this)">
+                    <img src=".user_uploaded/media_1789396225589.png" alt="EXIT 15 Facade Section Detail" title="Facade Section — Material Cross-Section" onclick="openLightbox(this)">
+                    <img src=".user_uploaded/media_1789397353917.png" alt="EXIT 15 Play-Doh Theming Close-up" title="Play-Doh Imagination Center — Theming Close-up" onclick="openLightbox(this)">
+                    <img src=".user_uploaded/media_1789397353882.png" alt="EXIT 15 Full Wireframe Overview" title="Full Wireframe Overview — All Zones" onclick="openLightbox(this)">
+                    <img class="tall" src=".user_uploaded/media_1789397353872.png" alt="EXIT 15 3D Annotated Isometric" title="3D Annotated Isometric — All Connections Labeled" onclick="openLightbox(this)">
+                    <img class="tall" src=".user_uploaded/media_1789397328762.png" alt="EXIT 15 Annotated Connection Drawing" title="3D Annotated Connection Drawing" onclick="openLightbox(this)">
+                    <img class="tall" src=".user_uploaded/media_1789397340315.png" alt="EXIT 15 Connection Plate Detail" title="Connection Plate Detail — Plan, Section & 3D" onclick="openLightbox(this)">
+                    <img class="tall" src=".user_uploaded/media_1789397340363.png" alt="EXIT 15 Full Elevation Section" title="Full Elevation Section — All Connections" onclick="openLightbox(this)">
+                    <img class="tall" src=".user_uploaded/media_1789397328754.png" alt="EXIT 15 Enlarged Plan with Callouts" title="Enlarged Plan — Connection Callouts" onclick="openLightbox(this)">
+                    <img class="tall" src=".user_uploaded/media_1789396225566.png" alt="EXIT 15 Overall Plan — Zone 1A" title="Overall Plan Sheet — Water Park Zone 1A" onclick="openLightbox(this)">
+                </div>
+            </div>
+        </article>
+
+        <!-- ===== PROJECT 3: ITC GREEN CENTRE ===== -->
+        <article class="project">
+            <div class="project-header">
+                <div class="project-number">Project 03</div>
+                <h3>ITC Green Centre — 15-Story Commercial Tower (LOD 450 Facade)</h3>
+                <div class="project-meta">
+                    <span class="meta-tag">📍 Bengaluru, India</span>
+                    <span class="meta-tag">🏢 Commercial</span>
+                    <span class="meta-tag role">👤 BIM Team Lead</span>
+                    <span class="meta-tag">Revit (Advanced Family Editor)</span>
+                    <span class="meta-tag">Navisworks</span>
+                    <span class="meta-tag">LOD 450</span>
+                </div>
+            </div>
+            <div class="project-body">
+                <h4>The Context & Challenge</h4>
+                <p>
+                    This 15-story commercial tower project demanded extremely high-fidelity modeling of its entire exterior facade system. 
+                    The primary challenge was the development of LOD 450 facade families — not standard curtain walls, but highly complex, 
+                    parametric assemblies containing hundreds of nested sub-components. This was the most technically demanding family 
+                    creation I had undertaken at that point in my career.
+                </p>
+
+                <h4>My Process & Leadership</h4>
+                <ul>
+                    <li><strong>Advanced Parametric Family Creation:</strong> Personally engineered and built the intricate LOD 450 facade families. Managed complex nesting hierarchies and parametric constraints to ensure families flexed correctly and contained all precise geometric data needed for fabrication.</li>
+                    <li><strong>Team Coordination & Documentation:</strong> Led a dedicated team of modelers to deploy these families across the entire 15-story building. Directed their efforts in generating extensive sheet production and highly detailed 2D representations required for facade installation.</li>
+                </ul>
+
+                <h4>The Deliverable & Impact</h4>
+                <ul>
+                    <li><strong>LOD 450 Facade Models</strong> — Incredibly accurate, data-rich facade models meeting stringent fabrication-level standards.</li>
+                    <li><strong>Comprehensive Drawing Packages</strong> — Detailed layout sheets and shop drawings produced directly from these complex families, bridging the gap between design intent and manufacturing.</li>
+                </ul>
+            </div>
+            <div class="gallery">
+                <div class="gallery-label">Project Visuals</div>
+                <div class="gallery-grid">
+                    <img class="hero-img" src=".user_uploaded/media_1789397769468.png" alt="ITC Green Centre — 3D Isometric (Light)" title="Full Building 3D Isometric — Facade Detail" onclick="openLightbox(this)">
+                    <img src=".user_uploaded/media_1789397769484.png" alt="ITC Green Centre — 3D Isometric (Dark)" title="Full Building 3D Isometric — Dark Background" onclick="openLightbox(this)">
+                    <img src=".user_uploaded/media_1789397769407.png" alt="ITC Green Centre — Elevation/Section" title="Facade Elevation & Section Detail" onclick="openLightbox(this)">
+                </div>
+            </div>
+        </article>
+
+    </div>
+
+    <!-- ===== FOOTER ===== -->
+    <footer>
+        <p><strong>Hari Govind R.B</strong> &nbsp;·&nbsp; BIM Engineer &nbsp;·&nbsp; harigovindhrb@gmail.com &nbsp;·&nbsp; +91 81590 02295</p>
+        <p style="margin-top: 6px; font-size: 12px; color: #999;">
+            "A good portfolio doesn't just show what you made. It shows how you think, how you work, and how you solve problems through BIM."
+        </p>
+    </footer>
+
+    <!-- ===== LIGHTBOX ===== -->
+    <div class="lightbox" id="lightbox" onclick="closeLightbox()">
+        <img id="lightbox-img" src="" alt="">
+    </div>
+
+    <script>
+        function openLightbox(el) {
+            document.getElementById('lightbox-img').src = el.src;
+            document.getElementById('lightbox').classList.add('active');
+        }
+        function closeLightbox() {
+            document.getElementById('lightbox').classList.remove('active');
+        }
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') closeLightbox();
+        });
+    </script>
+
+</body>
+</html>
