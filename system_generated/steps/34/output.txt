@@ -1,0 +1,34 @@
+The following changes were made by the replace_file_content tool to: C:\Users\intel\.gemini\antigravity\brain\399129cf-afba-4b62-ab55-46c1b5e0130d\portfolio.md. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -24,12 +24,22 @@
+ ---
+ 
+ ## Project 2: EXIT 15 – Theming Support Steel
+-**Location:** Al Nahda Entertainment Complex - Riyadh, Saudi Arabia  
+-**Sector:** Entertainment / Leisure  
+-**Role:** BIM Team Lead  
+-**Tools Used:** Revit, Navisworks Manage, ACC, PyRevit  
+-
+-*(Content to be drafted based on your explanation)*
++**Location:** Al Nahda Entertainment Complex (Water Park) - Riyadh, Saudi Arabia  
++**Sector:** Entertainment / Leisure  
++**Role:** BIM Team Lead (Steel Support)  
++**Tools Used:** Autodesk Revit (Revit Steel), Tekla (IFC), Dynamo, Navisworks Manage  
++
++### 1. The Context & Challenge
++For the water park sector of the massive EXIT 15 entertainment complex, I led the BIM delivery for the highly complex structural theming steel. The challenge was interpreting engineering calculations and converting external structural models into fully detailed, fabrication-ready models in Revit, all while managing a team that needed guidance on advanced steel detailing.
++
++### 2. My Process & Leadership
++*   **Interoperability & Modeling:** Received engineering calculations and structural models via Tekla. I led the workflow to convert these IFC models into native Revit elements, meticulously modeling all complex steel connections using Revit Steel.
++*   **Team Leadership:** I mentored the modeling team, helping them understand complex Revit Steel features, troubleshooting their issues, and resolving technical doubts to keep production moving.
++*   **BIM Automation:** To accelerate our workflow and reduce manual errors on repetitive tasks, I introduced specialized plugins and wrote custom Dynamo scripts.
++
++### 3. The Deliverable & Impact
++*   **Coordinated Fabrication Models:** Delivered highly accurate LOD 350+ steel support models that integrated perfectly with the complex architectural theming and MEP systems.
++*   **Increased Efficiency:** The implementation of Dynamo scripts and my direct mentorship empowered the team to work significantly faster, ensuring we hit our delivery milestones while maintaining strict quality standards.
+ 
+ 🔗 **[View Full Project Gallery & Deliverables (Google Drive Link)]()**
+ 
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

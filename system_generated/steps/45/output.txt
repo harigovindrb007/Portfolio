@@ -1,0 +1,29 @@
+The following changes were made by the replace_file_content tool to: C:\Users\intel\.gemini\antigravity\brain\399129cf-afba-4b62-ab55-46c1b5e0130d\portfolio.md. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -72,10 +72,19 @@
+ ## Project 5: ITC Green Centre – 15-Story Commercial Tower
+ **Location:** Bengaluru, India  
+ **Sector:** Commercial  
+-**Role:** BIM Team Lead  
+-**Tools Used:** Revit, Navisworks  
+-
+-*(Content to be drafted based on your explanation)*
++**Role:** BIM Team Lead (Facade & Family Creation)  
++**Tools Used:** Autodesk Revit (Advanced Family Editor), Navisworks  
++
++### 1. The Context & Challenge
++This commercial tower project required extremely high-fidelity modeling of its exterior shell. The primary challenge was the development of LOD 450 facade systems. These were not standard curtain walls; they required the creation of highly complex, parametric facade families containing hundreds of nested sub-components. It was the most technically demanding family creation challenge I had faced up to that point.
++
++### 2. My Process & Leadership
++*   **Advanced Parametric Family Creation:** I personally engineered and built the intricate LOD 450 facade families. I managed the complex nesting hierarchies and parametric constraints required to ensure the families flexed correctly and contained all the precise geometric data needed for fabrication.
++*   **Team Coordination & Documentation:** While I drove the high-level family architecture, I led a dedicated team of modelers to deploy these families across the entire 15-story model. I directed their efforts in generating the extensive sheet extraction and highly detailed 2D representations required for the facade installation.
++
++### 3. The Deliverable & Impact
++*   **LOD 450 Facade Models:** Delivered incredibly accurate, data-rich facade models that met stringent LOD 450 fabrication standards.
++*   **Comprehensive Drawing Packages:** Under my leadership, the team successfully produced detailed layout sheets and shop drawings directly from these complex families, flawlessly bridging the gap between design intent and manufacturing.
+ 
+ 🔗 **[View Full Project Gallery & Deliverables (Google Drive Link)]()**
+ 
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.
